@@ -64,6 +64,13 @@
                 <artifactId>pgg-platform-swagger</artifactId>
                 <version>${pgg.project.version}</version>
             </dependency>
+
+            <!-- gitegg boot -->
+            <dependency>
+                <groupId>com.pgg.platform</groupId>
+                <artifactId>pgg-platform-boot</artifactId>
+                <version>${pgg.project.version}</version>
+            </dependency>
             <!-- mysql数据库驱动 -->
             <dependency>
                 <groupId>mysql</groupId>

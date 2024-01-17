@@ -27,7 +27,7 @@ public class SwaggerConfig {
                 .groupName("2.X版本")
                 .select()
                 //这里指定Controller扫描包路径
-                .apis(RequestHandlerSelectors.basePackage("com.pgg.service.system.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.pgg.service"))
 //                .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();

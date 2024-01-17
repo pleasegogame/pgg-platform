@@ -4,8 +4,7 @@ import com.pgg.platform.boot.common.enums.ResultCodeEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.NoArgsConstructor;
 
 /**
  *
@@ -13,6 +12,7 @@ import lombok.ToString;
  */
 @ApiModel(description = "通用响应类")
 @Data
+@NoArgsConstructor
 public class Result <T>{
 
     @ApiModelProperty(value = "是否成功")

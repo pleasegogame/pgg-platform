@@ -36,7 +36,7 @@
         <!-- SpringCloud版本号 -->
         <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
         <!-- SpringPlatform版本号 -->
-        <spring.platform.version>Cairo-SR8</spring.platform.version>
+        <spring.cloud.alibaba>2.2.8.RELEASE</spring.cloud.alibaba>
     </properties>
 
     <dependencyManagement>
@@ -62,6 +62,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- SpringCloud Alibaba 微服务 -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -74,18 +82,30 @@
     </dependencies>
 
     <build>
+        <finalName>${project.name}</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven.plugin.version}</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>UTF-8</encoding>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
                 </configuration>
             </plugin>
         </plugins>

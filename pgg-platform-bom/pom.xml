@@ -36,6 +36,8 @@
         <postgresql.connector.version>9.1-901.jdbc4</postgresql.connector.version>
         <!-- 数据库连接池Druid -->
         <druid.version>1.1.23</druid.version>
+        <!-- redisson -->
+        <redission.version>3.13.6</redission.version>
         <!-- Mybatis Plus增强工具 -->
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
         <!-- Knife4j Swagger2文档 -->
@@ -79,6 +81,12 @@
                 <artifactId>pgg-platform-cloud</artifactId>
                 <version>${pgg.project.version}</version>
             </dependency>
+            <!-- pgg redis -->
+            <dependency>
+                <groupId>com.pgg.platform</groupId>
+                <artifactId>pgg-platform-redis</artifactId>
+                <version>${pgg.project.version}</version>
+            </dependency>
             <!-- mysql数据库驱动 -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -102,6 +110,12 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis.plus.version}</version>
+            </dependency>
+            <!-- redisson Redis客户端-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redission.version}</version>
             </dependency>
             <!-- Swagger2 knife4j bom方式引入 -->
             <dependency>

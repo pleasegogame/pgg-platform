@@ -17,6 +17,7 @@
         <module>pgg-platform-swagger</module>
         <module>pgg-platform-boot</module>
         <module>pgg-platform-cloud</module>
+        <module>pgg-platform-redis</module>
     </modules>
 
     <properties>

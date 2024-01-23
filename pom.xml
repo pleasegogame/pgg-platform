@@ -18,6 +18,7 @@
         <module>pgg-platform-boot</module>
         <module>pgg-platform-cloud</module>
         <module>pgg-platform-redis</module>
+        <module>pgg-platform-base</module>
     </modules>
 
     <properties>

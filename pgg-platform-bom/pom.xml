@@ -42,6 +42,8 @@
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
         <!-- Knife4j Swagger2文档 -->
         <knife4j.version>3.0.3</knife4j.version>
+
+        <hutool.version>5.5.1</hutool.version>
         <!-- Spring Cloud Alibaba -->
         <spring.cloud.alibaba>2.2.8.RELEASE</spring.cloud.alibaba>
 
@@ -87,6 +89,14 @@
                 <artifactId>pgg-platform-redis</artifactId>
                 <version>${pgg.project.version}</version>
             </dependency>
+
+            <!-- pgg redis -->
+            <dependency>
+                <groupId>com.pgg.platform</groupId>
+                <artifactId>pgg-platform-base</artifactId>
+                <version>${pgg.project.version}</version>
+            </dependency>
+
             <!-- mysql数据库驱动 -->
             <dependency>
                 <groupId>mysql</groupId>
@@ -124,6 +134,13 @@
                 <version>${knife4j.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- hutool Java常用工具包-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
 
             <!-- Spring Cloud Alibaba -->
